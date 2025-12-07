@@ -1,4 +1,5 @@
 import json
+import os
 import datetime
 from urllib.parse import urlparse
 
@@ -258,7 +259,7 @@ def heuristic_confidence(prio, comments: int):
 # -----------------------------
 # BACKEND API — HIDDEN HERE
 # -----------------------------
-BACKEND_URL = "http://localhost:8000"   # Hidden backend URL
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")   # Hidden backend URL
 
 # -----------------------------
 # API CALLS
@@ -514,3 +515,4 @@ with col4:
     st.markdown("#### 🚀 Next Steps")
     for m in suggest_next_steps(data.get("type", ""), data.get("priority_score", "")):
         st.write(f"- {m}")
+
