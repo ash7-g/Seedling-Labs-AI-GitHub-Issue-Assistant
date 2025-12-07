@@ -63,7 +63,7 @@ OPENAI_MODEL=gpt-4.1     # or gpt-4.1-mini, gpt-4.1-preview
 If your backend uses a different default model, update accordingly.
 
 
-# 🐙 ** Get your GitHub Token (to avoid rate limits)**
+# 🐙  Get your GitHub Token (to avoid rate limits)
 
 GitHub’s API limits unauthenticated requests.
 Create a lightweight token here:
@@ -229,6 +229,7 @@ If everything works, you will see:
 | KeyError: history | Move session init to top of `app.py` |
 
 ---
+
 
 
 
