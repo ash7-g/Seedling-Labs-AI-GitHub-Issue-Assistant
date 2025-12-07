@@ -40,7 +40,47 @@ backend/.env
 
 ```
 
-Open this file and add your credentials:
+# 🤖 **Get your OpenAI API Key (for GPT models)**
+
+Create an API key from your OpenAI account:
+
+👉 [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+
+Steps:
+
+1. Log in to OpenAI
+2. Go to **API Keys**
+3. Click **Create new secret key**
+4. Copy the key
+
+Add it to the backend `.env` file:
+
+```
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_MODEL=gpt-4.1     # or gpt-4.1-mini, gpt-4.1-preview
+```
+
+If your backend uses a different default model, update accordingly.
+
+
+# 🐙 ** Get your GitHub Token (to avoid rate limits)**
+
+GitHub’s API limits unauthenticated requests.
+Create a lightweight token here:
+
+👉 [https://github.com/settings/tokens](https://github.com/settings/tokens)
+
+Steps:
+
+1. Click **Generate new token (classic)**
+2. Select only **public_repo**
+3. Copy the token
+
+Add it to `.env`:
+
+```
+GITHUB_TOKEN=your_github_pat_here
+```
 
 ```bash
 
@@ -189,6 +229,7 @@ If everything works, you will see:
 | KeyError: history | Move session init to top of `app.py` |
 
 ---
+
 
 
 
