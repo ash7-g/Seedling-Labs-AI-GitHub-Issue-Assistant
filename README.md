@@ -25,8 +25,8 @@ You **do not** need to install Python or any dependencies.
 
 ```bash
 
-git clone <your-repo-url>
-cd <project-folder>
+git clone https://github.com/ash7-g/Seedling-Labs-AI-GitHub-Issue-Assistant.git
+cd Seedling-Labs-AI-GitHub-Issue-Assistant
 
 ```
 
@@ -166,6 +166,7 @@ If everything works, you will see:
 | KeyError: history | Move session init to top of `app.py` |
 
 ---
+
 
 
 
