@@ -1,7 +1,8 @@
 from fastapi import FastAPI
-from backend.schemas import IssueRequest, IssueAnalysis
-from backend.analyzer import analyze_issue
 from fastapi.middleware.cors import CORSMiddleware
+
+from backend.analyzer import analyze_issue
+from backend.schemas import IssueRequest, IssueAnalysis
 
 app = FastAPI()
 
