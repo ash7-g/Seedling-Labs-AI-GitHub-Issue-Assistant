@@ -32,11 +32,11 @@ cd Seedling-Labs-AI-GitHub-Issue-Assistant
 ---
 ## **2️⃣ Configure environment variables**
 
-The backend reads API keys from:
+The .env reads API keys from:
 
 ```bash
 
-backend/.env
+.env
 
 ```
 
@@ -229,6 +229,7 @@ If everything works, you will see:
 | KeyError: history | Move session init to top of `app.py` |
 
 ---
+
 
 
 
