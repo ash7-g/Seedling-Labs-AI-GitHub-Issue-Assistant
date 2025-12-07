@@ -29,10 +29,33 @@ git clone https://github.com/ash7-g/Seedling-Labs-AI-GitHub-Issue-Assistant.git
 cd Seedling-Labs-AI-GitHub-Issue-Assistant
 
 ```
+---
+## **2️⃣ Configure environment variables**
+
+The backend reads API keys from:
+
+```bash
+
+backend/.env
+
+```
+
+Open this file and add your credentials:
+
+```bash
+
+OPENAI_API_KEY=your_openai_key_here
+GITHUB_TOKEN=your_github_pat_here   # optional, prevents GitHub rate-limit
+OPENAI_MODEL=gpt-4.1
+
+```
+
+**✔ Docker Compose automatically loads this file into the backend container.**
+**✔ No extra steps needed.**
 
 ---
 
-## **2️⃣ Build and start the entire app**
+## **3️⃣ Build and start the entire app**
 
 ```bash
 
@@ -49,7 +72,7 @@ This launches:
 
 ---
 
-## **3️⃣ Open the app**
+## **4️⃣ Open the app**
 
 Open your browser:
 
@@ -61,7 +84,7 @@ Open your browser:
 
 ---
 
-## **4️⃣ Stop containers**
+## **5️⃣ Stop containers**
 
 ```bash
 docker compose down
@@ -69,7 +92,7 @@ docker compose down
 
 ---
 
-## **5️⃣ (Optional) Remove cache/images**
+## **6️⃣ (Optional) Remove cache/images**
 
 ```bash
 docker system prune -af
@@ -166,6 +189,7 @@ If everything works, you will see:
 | KeyError: history | Move session init to top of `app.py` |
 
 ---
+
 
 
 
