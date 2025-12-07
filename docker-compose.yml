@@ -1,13 +1,14 @@
 version: "3.9"
 
 services:
+  
   backend:
     build: ./backend
     container_name: seedling-backend
     ports:
       - "8000:8000"
     env_file:
-      - .env
+      - ./.env     # loads env from project root
     networks:
       - seedling-net
 
@@ -19,11 +20,10 @@ services:
     depends_on:
       - backend
     environment:
-      BACKEND_URL: "http://backend:8000"   # Reach backend via service name
+      BACKEND_URL: "http://backend:8000"   # internal DNS hostname
     networks:
       - seedling-net
 
 networks:
   seedling-net:
     driver: bridge
-
