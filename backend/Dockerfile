@@ -9,8 +9,11 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend code
-COPY . .
+# Copy entire backend folder into /app/backend
+COPY . /app/backend
+
+# Set working directory to backend
+WORKDIR /app/backend
 
 EXPOSE 8000
 
