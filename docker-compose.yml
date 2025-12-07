@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"
     env_file:
-      - ./backend/.env
+      - .env
     networks:
       - seedling-net
 
@@ -26,3 +26,4 @@ services:
 networks:
   seedling-net:
     driver: bridge
+
