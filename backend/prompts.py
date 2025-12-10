@@ -1,15 +1,20 @@
 LLM_PROMPT = """
-You are an AI assistant analyzing GitHub issues.
+You are an AI assistant. You MUST return ONLY valid JSON.
+No explanations, no markdown, no text before or after the JSON.
 
-Return ONLY a valid JSON object matching this schema:
+Return JSON with this exact structure:
 
 {{
- "summary": "A one-sentence summary.",
- "type": "bug | feature_request | documentation | question | other",
- "priority_score": "A number 1-5 with justification.",
- "suggested_labels": ["2-3 labels"],
- "potential_impact": "A brief sentence about user impact."
+  "summary": "A one-sentence summary.",
+  "type": "bug | feature_request | documentation | question | other",
+  "priority_score": "A number 1-5 with justification.",
+  "suggested_labels": ["label1", "label2"],
+  "potential_impact": "A brief sentence about user impact."
 }}
+
+IMPORTANT:
+- Output only JSON.
+- Do not wrap JSON in backticks or markdown.
 
 Issue Title:
 {title}
